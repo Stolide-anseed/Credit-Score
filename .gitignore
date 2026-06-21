@@ -10,7 +10,6 @@ venv/
 # Data files (too large for Git)
 *.csv
 *.parquet
-data/
 
 # Environment secrets (NEVER commit these)
 .env
