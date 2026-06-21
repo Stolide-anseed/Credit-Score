@@ -1,0 +1,30 @@
+cat > .gitignore << 'EOF'
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Data files (too large for Git)
+*.csv
+*.parquet
+data/
+
+# Environment secrets (NEVER commit these)
+.env
+*.secret
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+EOF
