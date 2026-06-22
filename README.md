@@ -1,31 +1,25 @@
-## Logistic regression experiment pipeline
+## Экспериментальный ноутбук для логистической регрессии
 
-This project has a lightweight experiment pipeline for checking preprocessing
-hypotheses on already prepared feature files.
+Ноутбук `notebooks/experiment_pipeline.ipynb` запускает легкий эксперимент для
+проверки гипотез по предобработке на уже подготовленных файлах с признаками.
 
-Input contract:
+Контракт входных данных:
 
-- CSV file contains ready-to-model features plus the target column.
-- Feature columns are numeric and have no missing values.
-- The target column has at least two classes.
+- CSV с признаками содержит признаки, готовые для подачи в модель.
+- Таргет может лежать в том же CSV или в отдельном CSV с таргетом.
+- Колонки признаков числовые и не содержат пропусков.
+- Целевая колонка содержит минимум два класса.
 
-Run:
+Открой ноутбук и укажи `FEATURES_PATH`, а при необходимости `TARGET_PATH`, в
+ячейке конфигурации.
 
-```powershell
-.\.venv\Scripts\python.exe -m model.experiment_pipeline path\to\features.csv --target Credit_Score --folds 5
-```
+Метрики выводятся по каждому фолду и в формате среднее/стандартное отклонение:
 
-Metrics printed per fold and as mean/std:
+- точность (precision) в вариантах macro/weighted
+- полнота (recall) в вариантах macro/weighted
+- ROC-AUC по схеме один против остальных в вариантах macro/weighted
+- средняя точность (average precision) в вариантах macro/weighted
+- точность, полнота, ROC-AUC и средняя точность по каждому классу на валидационных предсказаниях из всех фолдов
+- количество точек PR-кривой по каждому классу
 
-- precision macro/weighted
-- recall macro/weighted
-- ROC-AUC one-vs-rest macro/weighted
-- average precision macro/weighted
-- out-of-fold per-class precision, recall, ROC-AUC, average precision
-- PR-curve point counts per class
-
-To render PR curves locally:
-
-```powershell
-.\.venv\Scripts\python.exe -m model.experiment_pipeline path\to\features.csv --target Credit_Score --show-pr-curve
-```
+Ноутбук не сохраняет артефакты модели или файлы с метриками.
