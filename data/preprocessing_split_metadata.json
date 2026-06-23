@@ -1,0 +1,18 @@
+{
+  "split_strategy": "customer_id_group_shuffle",
+  "group_column": "Customer_ID",
+  "test_size": 0.2,
+  "random_state": 42,
+  "train_rows": 80000,
+  "test_rows": 20000,
+  "train_customers": 10000,
+  "test_customers": 2500,
+  "customer_overlap": 0,
+  "customer_profile_test_overlap": 0,
+  "target": "Credit_Score",
+  "score_map": {
+    "Poor": 0,
+    "Standard": 1,
+    "Good": 2
+  }
+}
