@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-06-24T13:33:38.980859+00:00",
+  "model": "lightgbm.LGBMClassifier",
+  "optimized_metric": "mean_average_precision_priority_classes",
+  "best_value": 0.8708405962254729,
+  "best_params": {
+    "max_depth": 12,
+    "n_estimators": 900,
+    "learning_rate": 0.03785428774804801,
+    "num_leaves": 123,
+    "min_child_samples": 52,
+    "subsample": 0.7702220909795412,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.7921685120580458,
+    "reg_alpha": 0.006472850773928197,
+    "reg_lambda": 5.165584218767955e-07,
+    "min_split_gain": 0.10544284089315753
+  },
+  "fixed_params": {
+    "objective": "multiclass",
+    "boosting_type": "gbdt",
+    "class_weight": "balanced",
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": -1
+  },
+  "best_trial_number": 34,
+  "best_trial_user_attrs": {
+    "average_precision_class_1": 0.9257781680751335,
+    "average_precision_class_2": 0.8159030243758124,
+    "average_precision_priority_mean": 0.8708405962254729
+  },
+  "priority_classes": [
+    "1",
+    "2"
+  ],
+  "label_classes": [
+    "0",
+    "1",
+    "2"
+  ],
+  "n_trials": 50,
+  "n_splits": 5,
+  "data": {
+    "features_path": "C:\\Users\\stoli\\PycharmProjects\\Credit_score\\data\\X_train_prepared.csv",
+    "target_path": "C:\\Users\\stoli\\PycharmProjects\\Credit_score\\data\\y_train.csv",
+    "target": "Credit_Score",
+    "rows": 80000,
+    "features": 107,
+    "class_counts": {
+      "0": 23272,
+      "1": 42594,
+      "2": 14134
+    }
+  }
+}

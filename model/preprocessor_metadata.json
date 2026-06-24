@@ -1,0 +1,8 @@
+{
+  "train_rows": 80000,
+  "test_rows": 20000,
+  "train_customers": 10000,
+  "test_customers": 2500,
+  "customer_overlap": 0,
+  "customer_profile_test_overlap": 0
+}
